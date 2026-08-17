@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetheria Voyages | Celestial & Luxury Travel Booking</title>
+  <meta name="description"
+    content="Discover and book luxury travel packages, tropical beach getaways, alpine adventures, and cultural tours with Aetheria Voyages. Instant digital tickets & 24/7 concierge support.">
+  <meta name="keywords"
+    content="travel booking, tour packages, luxury vacations, bali tours, swiss alps travel, amalfi coast, holiday deals">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Master Stylesheet Bundle -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div id="pagePreloader">
+    <div class="preloader-brand-box">
+      <div class="preloader-icon-glow">
+        <i class="fas fa-paper-plane"></i>
+      </div>
+      <h2 class="preloader-title">Aetheria <span>Voyages</span></h2>
+      <span class="preloader-badge">LUXURY CELESTIAL ESCAPES</span>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill"></div>
+      </div>
+      <span class="preloader-status">Preparing your celestial journey...</span>
+    </div>
+  </div>
+  <div class="top-bar d-none d-md-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-4">
+          <span><i class="fas fa-phone-alt text-primary me-1"></i> +1 (800) 555-VOYAGE</span>
+          <span><i class="fas fa-envelope text-primary me-1"></i> support@aetheriavoyages.com</span>
+          <span><i class="fas fa-circle text-success small me-1"></i> 24/7 Concierge Support</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center">
+            <span class="promo-badge-top me-2">SPECIAL OFFER</span>
+            <span class="text-white fw-semibold">Save 15% on All Voyages! Code: <strong
+                class="text-warning">AETHERIA15</strong></span>
+          </div>
+          <div class="vr bg-secondary opacity-50 mx-2" style="height: 14px;"></div>
+          <div class="d-flex gap-2">
+            <a href="#" class="text-muted"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. MAIN NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-logo" href="#">
+        <div class="brand-icon-box">
+          <i class="fas fa-paper-plane"></i>
+        </div>
+        <div>
+          <span>Aetheria</span><span class="text-gradient">Voyages</span>
+          <span class="brand-subtitle-badge">LUXURY</span>
+        </div>
+      </a>
+
+      <!-- Mobile Offcanvas Trigger -->
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#mobileNavDrawer">
+        <i class="fas fa-bars fs-3 text-main"></i>
+      </button>
+
+      <!-- Desktop Navbar Menu -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="packages.html">Packages</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="stays.html">Stays</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="navbar-action-group">
+          <!-- Currency Selector -->
+          <select id="currencySelect"
+            class="form-select form-select-sm border-0 bg-light text-dark fw-bold rounded-pill"
+            style="width: auto; font-size: 0.8rem;" title="Change Currency">
+            <option value="USD">$ USD</option>
+            <option value="EUR">€ EUR</option>
+            <option value="GBP">£ GBP</option>
+            <option value="JPY">¥ JPY</option>
+          </select>
+
+          <!-- Dark/Light Theme Switcher -->
+          <button id="themeToggleBtn" class="action-icon-btn" title="Toggle Light/Dark Theme">
+            <i id="themeIcon" class="fas fa-moon"></i>
+          </button>
+
+          <!-- Wishlist Drawer Trigger -->
+          <button class="action-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#wishlistOffcanvas"
+            title="View Wishlist">
+            <i class="far fa-heart"></i>
+            <span id="wishlistCountBadge" class="badge-count">0</span>
+          </button>
+
+          <!-- My Bookings Drawer Trigger -->
+          <button class="action-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#bookingsOffcanvas"
+            title="My Bookings">
+            <i class="fas fa-ticket-alt"></i>
+            <span id="bookingsCountBadge" class="badge-count">0</span>
+          </button>
+
+          <!-- User Auth Button -->
+          <button id="userAuthBtn"
+            class="btn btn-outline-brand rounded-pill nav-btn-signin d-flex align-items-center gap-1 ms-1"
+            data-bs-toggle="modal" data-bs-target="#authModal">
+            <i class="far fa-user"></i> <span>Sign In</span>
+          </button>
+
+          <!-- Direct Book CTA Button -->
+          <a href="#packages" class="btn btn-brand rounded-pill nav-btn-book ms-1">
+            <i class="fas fa-paper-plane"></i> Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Navigation Drawer -->
+  <div class="offcanvas offcanvas-start navbar-mobile-drawer" tabindex="-1" id="mobileNavDrawer">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand navbar-brand-logo" href="#">
+        <div class="brand-icon-box"><i class="fas fa-paper-plane"></i></div>
+        <span>Aetheria</span><span class="text-gradient">Voyages</span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column gap-2 mb-4">
+        <li class="nav-item"><a class="nav-link active" data-bs-dismiss="offcanvas" href="#hero"><i
+              class="fas fa-home text-primary"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#destinations"><i
+              class="fas fa-globe-americas text-primary"></i> Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#packages"><i
+              class="fas fa-box-open text-primary"></i> Packages</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#stays"><i
+              class="fas fa-hotel text-primary"></i> Stays & Experiences</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#gallery"><i
+              class="fas fa-images text-primary"></i> Travel Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#testimonials"><i
+              class="fas fa-star text-primary"></i> Guest Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#faq"><i
+              class="fas fa-question-circle text-primary"></i> FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#contact"><i
+              class="fas fa-envelope text-primary"></i> Contact Us</a></li>
+      </ul>
+
+      <div class="p-3 bg-light rounded-4 border mb-4">
+        <div class="small fw-bold text-muted mb-2">24/7 CONCIERGE HELP</div>
+        <div class="fw-bold text-dark"><i class="fas fa-phone-alt text-primary me-2"></i> +1 (800) 555-WANDER</div>
+        <div class="small text-muted mt-1"><i class="fas fa-envelope text-primary me-2"></i> support@aetheriavoyages.com
+        </div>
+      </div>
+
+      <a href="#packages" data-bs-dismiss="offcanvas" class="btn btn-brand w-100 justify-content-center py-2">
+        <i class="fas fa-paper-plane me-1"></i> Explore Travel Packages
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. HERO SECTION & UNIVERSAL SEARCH WIDGET
+       ========================================================================== -->
+  <section id="hero" class="hero-wrapper">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center">
+        <div class="col-lg-10 mx-auto text-center">
+
+          <!-- Floating Top Badge -->
+          <div class="hero-top-badge">
+            <i class="fas fa-compass"></i>
+            <span>#1 Luxury Celestial Travel Platform 2026</span>
+          </div>
+
+          <h1 class="hero-title">Discover <span class="hero-text-glow">World-Class</span> Destinations & Curated
+            Packages</h1>
+          <p class="hero-subtitle mx-auto">Experience seamless travel booking, handpicked luxury resorts, five-star
+            itineraries, and instant e-tickets for your next celestial escape.</p>
+
+          <!-- Universal Search Box Container -->
+          <div class="search-widget-container">
+            <form id="heroSearchForm">
+              <div class="row g-3 align-items-center">
+
+                <!-- Destination Field Card -->
+                <div class="col-lg-4 col-md-6 text-start">
+                  <div class="search-field-card">
+                    <div class="field-icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="flex-grow-1">
+                      <label class="search-label">Where To?</label>
+                      <input type="text" id="heroSearchInput" class="search-input-custom"
+                        placeholder="Search Bali, Swiss Alps, Santorini..." autocomplete="off">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Date Range Field Card -->
+                <div class="col-lg-3 col-md-6 text-start">
+                  <div class="search-field-card">
+                    <div class="field-icon-circle"><i class="far fa-calendar-alt"></i></div>
+                    <div class="flex-grow-1">
+                      <label class="search-label">Departure Date</label>
+                      <input type="date" id="heroDateInput" class="search-input-custom">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Guests Field Card (Popover) -->
+                <div class="col-lg-3 col-md-6 text-start">
+                  <div class="search-field-card dropdown">
+                    <div class="field-icon-circle"><i class="fas fa-user-friends"></i></div>
+                    <div class="flex-grow-1 w-100">
+                      <label class="search-label">Guests</label>
+                      <button class="search-input-custom text-start dropdown-toggle border-0 bg-transparent p-0 w-100"
+                        type="button" id="travelerDropdownBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                        <span id="travelerCountText">2 Guests</span>
+                      </button>
+
+                      <div class="dropdown-menu traveler-dropdown-content shadow-lg">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                          <div>
+                            <div class="fw-bold">Adults</div>
+                            <div class="small text-muted">Age 12+</div>
+                          </div>
+                          <div class="d-flex align-items-center gap-2">
+                            <button type="button" class="counter-btn" onclick="adjustTraveler('adults', -1)">-</button>
+                            <span id="adultCount" class="fw-bold px-2">2</span>
+                            <button type="button" class="counter-btn" onclick="adjustTraveler('adults', 1)">+</button>
+                          </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                          <div>
+                            <div class="fw-bold">Children</div>
+                            <div class="small text-muted">Age 2-11</div>
+                          </div>
+                          <div class="d-flex align-items-center gap-2">
+                            <button type="button" class="counter-btn"
+                              onclick="adjustTraveler('children', -1)">-</button>
+                            <span id="childCount" class="fw-bold px-2">0</span>
+                            <button type="button" class="counter-btn" onclick="adjustTraveler('children', 1)">+</button>
+                          </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                            <div class="fw-bold">Infants</div>
+                            <div class="small text-muted">Under 2</div>
+                          </div>
+                          <div class="d-flex align-items-center gap-2">
+                            <button type="button" class="counter-btn" onclick="adjustTraveler('infants', -1)">-</button>
+                            <span id="infantCount" class="fw-bold px-2">0</span>
+                            <button type="button" class="counter-btn" onclick="adjustTraveler('infants', 1)">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-lg-2 col-md-6">
+                  <button type="submit" class="btn btn-hero-search">
+                    <i class="fas fa-search me-1"></i> Search
+                  </button>
+                </div>
+
+              </div>
+            </form>
+
+            <!-- Quick Filter Pills -->
+            <div class="quick-filter-pills justify-content-center">
+              <span class="small text-muted font-heading fw-bold align-self-center me-2">Trending:</span>
+              <button class="filter-pill-btn" onclick="filterCategoryQuick('Tropical')"><i
+                  class="fas fa-umbrella-beach me-1"></i> Tropical</button>
+              <button class="filter-pill-btn" onclick="filterCategoryQuick('Mountain')"><i
+                  class="fas fa-mountain me-1"></i> Mountain</button>
+              <button class="filter-pill-btn" onclick="filterCategoryQuick('Honeymoon')"><i
+                  class="fas fa-heart me-1"></i> Honeymoon</button>
+              <button class="filter-pill-btn" onclick="filterCategoryQuick('Luxury')"><i class="fas fa-crown me-1"></i>
+                Luxury</button>
+              <button class="filter-pill-btn" onclick="filterCategoryQuick('Cultural')"><i
+                  class="fas fa-landmark me-1"></i> Cultural</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. LIVE STATS BANNER
+       ========================================================================== -->
+  <section class="stats-banner">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Happy Travelers</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number">120+</div>
+            <div class="stat-label">Worldwide Destinations</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number">4.9/5</div>
+            <div class="stat-label">Customer Rating</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Concierge Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. POPULAR DESTINATIONS
+       ========================================================================== -->
+  <section id="destinations" class="section-padding">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
+        <div>
+          <span class="section-subtitle">Top Locations</span>
+          <h2 class="section-title">Popular Destinations</h2>
+        </div>
+        <div>
+          <a href="destinations.html" class="btn btn-outline-brand rounded-pill btn-sm fw-bold">
+            Explore All Destinations <i class="fas fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="destinationsGrid" class="row">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. FEATURED TRAVEL PACKAGES & LIVE FILTERING ENGINE
+       ========================================================================== -->
+  <section id="packages" class="section-padding bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
+        <div>
+          <span class="section-subtitle">Handcrafted Itineraries</span>
+          <h2 class="section-title">Featured Travel Packages</h2>
+        </div>
+        <div>
+          <a href="packages.html" class="btn btn-outline-brand rounded-pill btn-sm fw-bold">
+            Browse All Packages <i class="fas fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Filter Sidebar Controls -->
+        <div class="col-lg-3">
+          <div class="filter-card-sidebar sticky-top" style="top: 90px; z-index: 10;">
+            <h5 class="fw-bold mb-3"><i class="fas fa-filter text-primary me-2"></i> Filter Packages</h5>
+
+            <!-- Text Search Filter -->
+            <div class="mb-4">
+              <label class="form-label small fw-bold text-uppercase">Search Keyword</label>
+              <input type="text" id="pkgSearchInput" class="form-control rounded-pill"
+                placeholder="e.g. Bali, Cruise, Villa...">
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="mb-4">
+              <label class="form-label small fw-bold text-uppercase">Category</label>
+              <div class="d-flex flex-column gap-2">
+                <button class="btn btn-sm btn-outline-brand text-start category-filter-btn active" data-category="All"
+                  onclick="filterCategory('All', this)">All Categories</button>
+                <button class="btn btn-sm btn-outline-brand text-start category-filter-btn" data-category="Tropical"
+                  onclick="filterCategory('Tropical', this)">Tropical & Beach</button>
+                <button class="btn btn-sm btn-outline-brand text-start category-filter-btn" data-category="Mountain"
+                  onclick="filterCategory('Mountain', this)">Mountain & Ski</button>
+                <button class="btn btn-sm btn-outline-brand text-start category-filter-btn" data-category="Luxury"
+                  onclick="filterCategory('Luxury', this)">Luxury Escapes</button>
+                <button class="btn btn-sm btn-outline-brand text-start category-filter-btn" data-category="Cultural"
+                  onclick="filterCategory('Cultural', this)">Cultural & Heritage</button>
+                <button class="btn btn-sm btn-outline-brand text-start category-filter-btn" data-category="Honeymoon"
+                  onclick="filterCategory('Honeymoon', this)">Honeymoon Specials</button>
+              </div>
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <label class="form-label small fw-bold text-uppercase mb-0">Max Budget</label>
+                <span id="priceRangeVal" class="fw-bold text-primary">$2,500</span>
+              </div>
+              <input type="range" id="priceRange" class="form-range" min="500" max="3000" step="50" value="2500">
+            </div>
+
+            <!-- Duration Filter -->
+            <div class="mb-4">
+              <label class="form-label small fw-bold text-uppercase">Trip Duration</label>
+              <select id="durationFilter" class="form-select rounded-pill">
+                <option value="All">All Durations</option>
+                <option value="short">1 - 5 Days</option>
+                <option value="medium">6 - 7 Days</option>
+                <option value="long">8+ Days</option>
+              </select>
+            </div>
+
+            <!-- Sort By Filter -->
+            <div class="mb-4">
+              <label class="form-label small fw-bold text-uppercase">Sort By</label>
+              <select id="sortFilter" class="form-select rounded-pill">
+                <option value="featured">Featured / Recommended</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+                <option value="duration">Shortest Duration</option>
+              </select>
+            </div>
+
+            <button class="btn btn-sm btn-outline-secondary w-100 rounded-pill" onclick="resetPackageFilters()">
+              <i class="fas fa-undo me-1"></i> Reset Filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Package Grid Display -->
+        <div class="col-lg-9">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span id="packageCountText" class="fw-semibold text-muted">Showing 8 Travel Packages</span>
+          </div>
+          <div id="packagesGrid" class="row">
+            <!-- Rendered dynamically via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. STAYS & UNIQUE EXPERIENCES
+       ========================================================================== -->
+  <section id="stays" class="section-padding">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
+        <div>
+          <span class="section-subtitle">Boutique Stays & Guided Tours</span>
+          <h2 class="section-title">Luxury Resorts & Activities</h2>
+        </div>
+        <div>
+          <a href="stays.html" class="btn btn-outline-brand rounded-pill btn-sm fw-bold">
+            View All Stays & Experiences <i class="fas fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hotels Grid -->
+      <h4 class="fw-bold mb-3"><i class="fas fa-hotel text-primary me-2"></i> Featured Resorts & Stays</h4>
+      <div id="staysGrid" class="row mb-5">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <!-- Activities Grid -->
+      <h4 class="fw-bold mb-3"><i class="fas fa-hiking text-primary me-2"></i> Popular Day Experiences</h4>
+      <div id="activitiesGrid" class="row">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. INTERACTIVE PHOTO GALLERY
+       ========================================================================== -->
+  <section id="gallery" class="section-padding bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
+        <div>
+          <span class="section-subtitle">Visual Inspiration</span>
+          <h2 class="section-title">Aetheria Photo Gallery</h2>
+        </div>
+        <div>
+          <a href="gallery.html" class="btn btn-outline-brand rounded-pill btn-sm fw-bold">
+            Open Full Gallery <i class="fas fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gallery Filter Category Buttons -->
+      <div class="d-flex justify-content-center gap-2 mb-4 flex-wrap">
+        <button class="btn btn-outline-brand rounded-pill gallery-filter-btn active"
+          onclick="filterGallery('All', this)">All Photos</button>
+        <button class="btn btn-outline-brand rounded-pill gallery-filter-btn"
+          onclick="filterGallery('Beaches', this)">Beaches & Islands</button>
+        <button class="btn btn-outline-brand rounded-pill gallery-filter-btn"
+          onclick="filterGallery('Mountains', this)">Mountains & Alpine</button>
+        <button class="btn btn-outline-brand rounded-pill gallery-filter-btn"
+          onclick="filterGallery('Culture', this)">Heritage & Culture</button>
+        <button class="btn btn-outline-brand rounded-pill gallery-filter-btn"
+          onclick="filterGallery('Luxury', this)">Luxury Stays</button>
+      </div>
+
+      <div id="galleryGrid" class="row">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. CUSTOMER REVIEWS & TESTIMONIALS
+       ========================================================================== -->
+  <section id="testimonials" class="section-padding">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
+        <div>
+          <span class="section-subtitle">Verified Travelers</span>
+          <h2 class="section-title">What Our Guests Say</h2>
+        </div>
+        <button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#addReviewModal">
+          <i class="fas fa-pen me-1"></i> Leave a Review
+        </button>
+      </div>
+
+      <div id="testimonialsGrid" class="row">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. FAQ ACCORDION
+       ========================================================================== -->
+  <section id="faq" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center max-width-700 mx-auto mb-5">
+        <span class="section-subtitle">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="text-muted">Find quick answers to common queries regarding tour bookings, payment security, flight
+          insurance, and cancellations.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion faq-accordion" id="faqAccordion">
+            <!-- Rendered dynamically via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. CONTACT SECTION & CONCIERGE ASSISTANCE
+       ========================================================================== -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5">
+          <span class="section-subtitle">Get in Touch</span>
+          <h2 class="section-title">Speak with a Personal Travel Concierge</h2>
+          <p class="text-muted mb-4">Have questions or want a custom travel itinerary designed for your family or
+            honeymoon? Reach out to our 24/7 dedicated travel advisors.</p>
+
+          <div class="d-flex gap-3 mb-3">
+            <div class="action-icon-btn bg-primary text-white"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <div class="fw-bold">Call Us 24/7</div>
+              <div class="text-muted">+1 (800) 555-WANDER</div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-3">
+            <div class="action-icon-btn bg-primary text-white"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="fw-bold">Email Concierge</div>
+              <div class="text-muted">support@wanderlusthorizon.com</div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-4">
+            <div class="action-icon-btn bg-primary text-white"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="fw-bold">Headquarters</div>
+              <div class="text-muted">550 Fifth Avenue, New York, NY 10036</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-lg rounded-4 p-4 glass-card">
+            <h4 class="fw-bold mb-3">Send Us a Direct Message</h4>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Your Name</label>
+                  <input type="text" class="form-control rounded-pill" required placeholder="John Doe">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Your Email</label>
+                  <input type="email" class="form-control rounded-pill" required placeholder="john@example.com">
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold">Destination Interest</label>
+                  <input type="text" class="form-control rounded-pill"
+                    placeholder="e.g. Bali, Swiss Alps, Santorini...">
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold">Message</label>
+                  <textarea class="form-control rounded-4" rows="4" required
+                    placeholder="Tell us about your trip plans, group size, and dates..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-brand rounded-pill w-100 py-2">
+                    <i class="fas fa-paper-plane me-1"></i> Send Inquiry
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. FLOATING AI CHATBOT & TOAST CONTAINER
+       ========================================================================== -->
+  <!-- Floating Chatbot Toggle Button -->
+  <div id="chatbotToggleBtn" class="floating-chatbot-btn" title="Ask AI Travel Assistant">
+    <i class="fas fa-robot"></i>
+  </div>
+
+  <!-- Chatbot Box -->
+  <div id="chatbotBox" class="chatbot-box hidden">
+    <div class="chatbot-header">
+      <div class="d-flex align-items-center gap-2">
+        <i class="fas fa-robot fs-5"></i>
+        <div>
+          <div class="fw-bold leading-tight">AI Concierge</div>
+          <div class="small text-white-50" style="font-size:0.75rem;">Online 24/7</div>
+        </div>
+      </div>
+      <button id="chatbotCloseBtn" type="button" class="btn-close btn-close-white"></button>
+    </div>
+
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="chat-bubble bot">
+        Hello! I'm your AI Travel Assistant. How can I help you choose your dream destination or package today?
+      </div>
+    </div>
+
+    <form id="chatbotForm" class="p-2 border-top bg-light">
+      <div class="input-group">
+        <input type="text" id="chatbotInput" class="form-control rounded-pill border-0 ps-3"
+          placeholder="Type a message...">
+        <button type="submit" class="btn btn-brand rounded-pill px-3 ms-1"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index: 1090;"></div>
+
+  <!-- ==========================================================================
+       12. MODALS & OFFCANVAS DRAWERS
+       ========================================================================== -->
+
+  <!-- A. PACKAGE DETAILS MODAL -->
+  <div class="modal fade" id="packageDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content border-0 rounded-4 overflow-hidden">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <img id="modalPkgImg" src="" class="img-fluid rounded-4 shadow-sm w-100 mb-3"
+                style="max-height: 380px; object-fit: cover;" alt="Package Detail Image">
+
+              <h5 class="fw-bold mb-2"><i class="fas fa-hotel text-primary me-2"></i> Accommodations</h5>
+              <div id="modalPkgHotel" class="p-3 border rounded-3 bg-light mb-3"></div>
+
+              <div class="row">
+                <div class="col-6">
+                  <h6 class="fw-bold text-success"><i class="fas fa-check-circle me-1"></i> Included</h6>
+                  <ul id="modalPkgInclusions" class="list-unstyled feature-check-list"></ul>
+                </div>
+                <div class="col-6">
+                  <h6 class="fw-bold text-danger"><i class="fas fa-times-circle me-1"></i> Excluded</h6>
+                  <ul id="modalPkgExclusions" class="list-unstyled feature-check-list"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <span id="modalPkgDestination" class="badge bg-primary rounded-pill mb-2"></span>
+              <h2 id="modalPkgTitle" class="fw-bold mb-2"></h2>
+              <div id="modalPkgRating" class="mb-3"></div>
+
+              <p id="modalPkgDesc" class="text-muted mb-4"></p>
+
+              <h5 class="fw-bold mb-3"><i class="fas fa-route text-primary me-2"></i> Day-by-Day Itinerary</h5>
+              <div id="modalPkgItinerary" class="mb-4" style="max-height: 250px; overflow-y: auto;"></div>
+
+              <div class="d-flex align-items-center justify-content-between p-3 border rounded-3 bg-light mt-auto">
+                <div>
+                  <span class="small text-muted">Starting From</span>
+                  <div class="d-flex align-items-baseline gap-2">
+                    <span id="modalPkgPrice" class="fs-2 fw-bold text-primary"></span>
+                    <span id="modalPkgOriginalPrice" class="text-muted text-decoration-line-through"></span>
+                  </div>
+                </div>
+                <button id="modalBookNowBtn" class="btn btn-brand btn-lg">
+                  <i class="fas fa-ticket-alt me-1"></i> Book This Tour
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B. MULTI-STEP BOOKING MODAL -->
+  <div class="modal fade" id="bookingModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border-0 rounded-4 overflow-hidden">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title fw-bold"><i class="fas fa-plane-departure me-2"></i> Tour Reservation Workflow</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <!-- Step Progress Bar -->
+          <div class="step-progress-bar">
+            <div id="stepIndicator1" class="step-item active">1</div>
+            <div id="stepIndicator2" class="step-item">2</div>
+            <div id="stepIndicator3" class="step-item">3</div>
+            <div id="stepIndicator4" class="step-item">4</div>
+          </div>
+
+          <!-- Step 1: Dates & Guests -->
+          <div id="bookingStep1" class="booking-step-content">
+            <h5 class="fw-bold mb-1">Step 1: Select Departure Date</h5>
+            <p class="small text-muted mb-4">Package: <strong id="bookingPkgName"></strong> | Base Price: <strong
+                id="bookingBasePrice" class="text-primary"></strong> / traveler</p>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">Departure Date</label>
+              <input type="date" id="bookingTravelDate" class="form-control rounded-pill">
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+              <button class="btn btn-brand" onclick="proceedToStep2()">Next: Add-on Options <i
+                  class="fas fa-arrow-right ms-1"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 2: Add-ons & Extra Experiences -->
+          <div id="bookingStep2" class="booking-step-content d-none">
+            <h5 class="fw-bold mb-1">Step 2: Select Travel Add-ons</h5>
+            <p class="small text-muted mb-3">Customize your tour package with recommended enhancements.</p>
+
+            <div class="list-group mb-4">
+              <label class="list-group-item d-flex justify-content-between align-items-center rounded-3 mb-2 border">
+                <div>
+                  <input class="form-check-input me-2 addon-checkbox" type="checkbox" data-name="VIP Airport Shuttle"
+                    data-cost="60">
+                  <strong class="font-heading">VIP Airport Pickup & Shuttle</strong>
+                  <div class="small text-muted">Private Mercedes transfer to & from airport</div>
+                </div>
+                <span class="fw-bold text-primary">+$60 / traveler</span>
+              </label>
+
+              <label class="list-group-item d-flex justify-content-between align-items-center rounded-3 mb-2 border">
+                <div>
+                  <input class="form-check-input me-2 addon-checkbox" type="checkbox" data-name="Full Travel Insurance"
+                    data-cost="45">
+                  <strong class="font-heading">Full Travel Insurance & Medical</strong>
+                  <div class="small text-muted">Includes 100% trip interruption protection</div>
+                </div>
+                <span class="fw-bold text-primary">+$45 / traveler</span>
+              </label>
+
+              <label class="list-group-item d-flex justify-content-between align-items-center rounded-3 mb-2 border">
+                <div>
+                  <input class="form-check-input me-2 addon-checkbox" type="checkbox" data-name="Gourmet Dining Upgrade"
+                    data-cost="80">
+                  <strong class="font-heading">Gourmet Dining Upgrade</strong>
+                  <div class="small text-muted">Includes 3 fine-dining chef dinners & wine tasting</div>
+                </div>
+                <span class="fw-bold text-primary">+$80 / traveler</span>
+              </label>
+            </div>
+
+            <!-- Price Breakdown Box -->
+            <div class="p-3 bg-light rounded-3 mb-4">
+              <div class="d-flex justify-content-between small text-muted mb-1">
+                <span>Subtotal (Base Price):</span>
+                <span id="summarySubtotal">$0</span>
+              </div>
+              <div class="d-flex justify-content-between small text-muted mb-1">
+                <span>Add-ons Total:</span>
+                <span id="summaryAddons">$0</span>
+              </div>
+              <div class="d-flex justify-content-between fw-bold fs-5 text-dark border-top pt-2 mt-2">
+                <span>Estimated Total Amount:</span>
+                <span id="summaryTotal" class="text-primary">$0</span>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-outline-secondary rounded-pill" onclick="showBookingStep(1)"><i
+                  class="fas fa-arrow-left me-1"></i> Back</button>
+              <button class="btn btn-brand" onclick="proceedToStep3()">Next: Guest Details & Payment <i
+                  class="fas fa-arrow-right ms-1"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 3: Passenger & Payment Simulation -->
+          <div id="bookingStep3" class="booking-step-content d-none">
+            <h5 class="fw-bold mb-3">Step 3: Passenger Contact & Payment</h5>
+
+            <form id="paymentForm">
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Full Name (Primary Guest)</label>
+                  <input type="text" id="custFullName" class="form-control rounded-pill" required
+                    placeholder="John Smith">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Email Address</label>
+                  <input type="email" id="custEmail" class="form-control rounded-pill" required
+                    placeholder="john@example.com">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Phone Number</label>
+                  <input type="tel" id="custPhone" class="form-control rounded-pill" required
+                    placeholder="+1 (555) 019-2834">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Payment Method</label>
+                  <select class="form-select rounded-pill">
+                    <option value="card">Credit / Debit Card (Instant)</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="applepay">Apple Pay / Google Pay</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Mock Credit Card Info -->
+              <div class="p-3 border rounded-3 bg-light mb-4">
+                <h6 class="fw-bold mb-3"><i class="far fa-credit-card text-primary me-2"></i> Card Details (Simulation)
+                </h6>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <input type="text" class="form-control rounded-pill" placeholder="Card Number (4000 1234 5678 9010)"
+                      value="4000 1234 5678 9010" required>
+                  </div>
+                  <div class="col-6">
+                    <input type="text" class="form-control rounded-pill" placeholder="MM/YY" value="12/28" required>
+                  </div>
+                  <div class="col-6">
+                    <input type="text" class="form-control rounded-pill" placeholder="CVC" value="888" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-secondary rounded-pill" onclick="showBookingStep(2)"><i
+                    class="fas fa-arrow-left me-1"></i> Back</button>
+                <button type="submit" id="confirmPaymentBtn" class="btn btn-brand">
+                  <i class="fas fa-lock me-2"></i> Pay & Confirm Booking
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Step 4: Digital E-Ticket & Confirmation -->
+          <div id="bookingStep4" class="booking-step-content d-none text-center">
+            <div class="text-success mb-3"><i class="fas fa-check-circle fa-4x"></i></div>
+            <h3 class="fw-bold">Booking Confirmed!</h3>
+            <p class="text-muted mb-4">Your digital travel pass has been generated. A confirmation email was sent to
+              your inbox.</p>
+
+            <div id="eticketReceipt" class="mb-4 text-start"></div>
+
+            <div class="d-flex justify-content-center gap-3">
+              <button class="btn btn-brand" onclick="printETicket()"><i class="fas fa-print me-1"></i> Print / Download
+                Ticket</button>
+              <button class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Close Window</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C. LIGHTBOX GALLERY MODAL -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body text-center p-0 position-relative">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+            data-bs-dismiss="modal"></button>
+          <img id="lightboxImg" src="" class="img-fluid rounded-4 shadow-lg mb-2" alt="Enlarged view">
+          <div id="lightboxTitle" class="h5 text-white fw-bold mb-0"></div>
+          <div id="lightboxLocation" class="small text-white-50"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D. ADD REVIEW MODAL -->
+  <div class="modal fade" id="addReviewModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold"><i class="fas fa-star text-warning me-2"></i> Leave a Guest Review</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="reviewForm">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Your Name</label>
+              <input type="text" id="revName" class="form-control rounded-pill" required
+                placeholder="e.g. Sarah Jenkins">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Country / City</label>
+              <input type="text" id="revCountry" class="form-control rounded-pill" placeholder="e.g. Australia">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Trip Package</label>
+              <input type="text" id="revTrip" class="form-control rounded-pill" placeholder="e.g. Bali Tropical Bliss">
+            </div>
+            <div class="mb-4">
+              <label class="form-label small fw-bold">Your Review</label>
+              <textarea id="revComment" class="form-control rounded-4" rows="4" required
+                placeholder="Write about your experience, guide, hotel, and highlights..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-brand rounded-pill w-100">Submit Review</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E. USER AUTH MODAL -->
+  <div class="modal fade" id="authModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold"><i class="fas fa-user-circle text-primary me-2"></i> Account Access</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Email Address</label>
+              <input type="email" id="loginEmail" class="form-control rounded-pill" required
+                placeholder="name@domain.com">
+            </div>
+            <div class="mb-4">
+              <label class="form-label small fw-bold">Password</label>
+              <input type="password" class="form-control rounded-pill" required value="password123">
+            </div>
+            <button type="submit" class="btn btn-brand rounded-pill w-100 mb-3">Sign In</button>
+            <div class="text-center small text-muted">Demo Credentials: any email / password</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- F. WISHLIST OFFCANVAS DRAWER -->
+  <div class="offcanvas offcanvas-end rounded-start-4" tabindex="-1" id="wishlistOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold"><i class="fas fa-heart text-danger me-2"></i> Saved Wishlist</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0" id="wishlistDrawerList">
+      <!-- Rendered dynamically via JS -->
+    </div>
+  </div>
+
+  <!-- G. MY BOOKINGS OFFCANVAS DRAWER -->
+  <div class="offcanvas offcanvas-end rounded-start-4" tabindex="-1" id="bookingsOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold"><i class="fas fa-ticket-alt text-primary me-2"></i> My Travel Passes</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body" id="bookingsDrawerList">
+      <!-- Rendered dynamically via JS -->
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       13. PRE-FOOTER TRUST BAR & LUXURY FOOTER
+       ========================================================================== -->
+  <div class="pre-footer-trust-bar">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="trust-feature-box">
+            <div class="trust-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+            <div>
+              <h6 class="fw-bold text-white mb-1">100% Secure Booking</h6>
+              <span class="small text-muted">256-Bit Encrypted Data</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="trust-feature-box">
+            <div class="trust-icon-wrap"><i class="fas fa-plane-arrival"></i></div>
+            <div>
+              <h6 class="fw-bold text-white mb-1">Handpicked Escapes</h6>
+              <span class="small text-muted">Curated 5-Star Itineraries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="trust-feature-box">
+            <div class="trust-icon-wrap"><i class="fas fa-headset"></i></div>
+            <div>
+              <h6 class="fw-bold text-white mb-1">24/7 Concierge</h6>
+              <span class="small text-muted">Dedicated Personal Advisor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="trust-feature-box">
+            <div class="trust-icon-wrap"><i class="fas fa-tag"></i></div>
+            <div>
+              <h6 class="fw-bold text-white mb-1">Best Rate Guarantee</h6>
+              <span class="small text-muted">Zero Hidden Booking Fees</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row g-3 mb-3">
+        <!-- Brand & Contact Summary -->
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand navbar-brand-logo text-white mb-2 d-inline-flex align-items-center" href="#">
+            <div class="brand-icon-box me-2" style="width:34px; height:34px; font-size:1rem;"><i
+                class="fas fa-paper-plane"></i></div>
+            <span style="font-size:1.3rem; color:#ffffff;">Aetheria</span><span class="text-gradient"
+              style="font-size:1.3rem;">Voyages</span>
+          </a>
+          <p class="footer-text-bright mb-2">Your trusted luxury travel booking partner. Crafting celestial memories
+            with handpicked resorts and 24/7 concierge support.</p>
+
+          <div class="footer-text-bright mb-1"><i class="fas fa-phone-alt text-primary me-2"></i> +1 (800) 555-VOYAGE
+          </div>
+          <div class="footer-text-bright mb-3"><i class="fas fa-envelope text-primary me-2"></i>
+            support@aetheriavoyages.com</div>
+
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Top Destinations Column -->
+        <div class="col-lg-2 col-6">
+          <h6 class="footer-title">Destinations</h6>
+          <ul class="footer-links">
+            <li><a href="#packages" onclick="filterCategoryQuick('Tropical')"><i
+                  class="fas fa-chevron-right small text-primary"></i> Bali</a></li>
+            <li><a href="#packages" onclick="filterCategoryQuick('Mountain')"><i
+                  class="fas fa-chevron-right small text-primary"></i> Swiss Alps</a></li>
+            <li><a href="#packages" onclick="filterCategoryQuick('Luxury')"><i
+                  class="fas fa-chevron-right small text-primary"></i> Amalfi Coast</a></li>
+            <li><a href="#packages" onclick="filterCategoryQuick('Cultural')"><i
+                  class="fas fa-chevron-right small text-primary"></i> Kyoto</a></li>
+            <li><a href="#packages" onclick="filterCategoryQuick('Honeymoon')"><i
+                  class="fas fa-chevron-right small text-primary"></i> Santorini</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="col-lg-2 col-6">
+          <h6 class="footer-title">Explore</h6>
+          <ul class="footer-links">
+            <li><a href="#hero"><i class="fas fa-chevron-right small text-primary"></i> Home</a></li>
+            <li><a href="#packages"><i class="fas fa-chevron-right small text-primary"></i> Tour Packages</a></li>
+            <li><a href="#stays"><i class="fas fa-chevron-right small text-primary"></i> Luxury Stays</a></li>
+            <li><a href="#gallery"><i class="fas fa-chevron-right small text-primary"></i> Gallery</a></li>
+            <li><a href="#faq"><i class="fas fa-chevron-right small text-primary"></i> Help & FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Card Column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-newsletter-box">
+            <h6 class="footer-title mb-1"><i class="fas fa-envelope-open-text text-primary me-2"></i> Exclusive Deals
+            </h6>
+            <p class="footer-text-bright mb-2">Subscribe to receive secret discount codes and getaway updates.</p>
+
+            <form id="newsletterForm" class="mb-2">
+              <div class="input-group">
+                <input type="email" class="form-control rounded-start-pill border-0 ps-3 py-1"
+                  style="font-size:0.85rem;" required placeholder="Enter your email">
+                <button class="btn btn-brand rounded-end-pill px-3 py-1" style="font-size:0.85rem;"
+                  type="submit">Join</button>
+              </div>
+            </form>
+
+            <div class="footer-text-bright d-flex align-items-center gap-2" style="font-size:0.75rem;">
+              <i class="fas fa-shield-alt text-success"></i> 100% Spam Free & Cancel Anytime
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Strip -->
+      <div
+        class="border-top border-secondary border-opacity-25 pt-3 d-flex justify-content-between align-items-center flex-wrap gap-2 small">
+        <div class="footer-text-bright" style="font-size:0.8rem;">&copy; 2026 Aetheria Voyages Inc. All Rights Reserved.
+        </div>
+
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+          <span class="payment-badge"><i class="fab fa-cc-visa me-1 text-info"></i> Visa</span>
+          <span class="payment-badge"><i class="fab fa-cc-mastercard me-1 text-warning"></i> MasterCard</span>
+          <span class="payment-badge"><i class="fab fa-cc-paypal me-1 text-primary"></i> PayPal</span>
+          <span class="payment-badge"><i class="fab fa-apple-pay me-1 text-light"></i> Apple Pay</span>
+        </div>
+
+        <div>
+          <a href="#hero" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1" style="font-size:0.78rem;">
+            <i class="fas fa-arrow-up me-1"></i> Top
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Application Dataset & Main Script -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

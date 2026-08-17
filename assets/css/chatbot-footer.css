@@ -1,0 +1,255 @@
+/* ==========================================================================
+   WANDERLUST HORIZON - Floating AI Chatbot & High-Visibility Footer CSS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Floating AI Chatbot Popover
+   -------------------------------------------------------------------------- */
+.floating-chatbot-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.4);
+  cursor: pointer;
+  z-index: 1030;
+  transition: var(--transition);
+}
+
+.floating-chatbot-btn:hover {
+  transform: scale(1.08) rotate(10deg);
+  box-shadow: 0 12px 25px rgba(2, 132, 199, 0.55);
+}
+
+.chatbot-box {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 2rem;
+  width: 340px;
+  height: 440px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  z-index: 1035;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.chatbot-box.hidden {
+  display: none !important;
+}
+
+.chatbot-header {
+  background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
+  color: #ffffff;
+  padding: 0.85rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-messages {
+  flex-grow: 1;
+  padding: 0.85rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.chat-bubble {
+  max-width: 85%;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.chat-bubble.bot {
+  background: var(--bg-section-alt);
+  color: var(--text-main);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+  border: 1px solid var(--border-color);
+}
+
+.chat-bubble.user {
+  background: var(--primary);
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Pre-Footer Trust Bar & High-Visibility Compact Footer
+   -------------------------------------------------------------------------- */
+.pre-footer-trust-bar {
+  background: #091124;
+  color: #ffffff;
+  padding: 1.25rem 0;
+  border-top: 2px solid rgba(2, 132, 199, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.trust-feature-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.trust-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(2, 132, 199, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.trust-feature-box h6 {
+  color: #ffffff !important;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.trust-feature-box span {
+  color: #cbd5e1 !important;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.footer-section {
+  background: #091124;
+  color: #e2e8f0;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer-title {
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.footer-text-bright {
+  color: #cbd5e1 !important;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.45rem;
+}
+
+.footer-links a {
+  color: #f1f5f9 !important;        /* Crisp Bright White-Slate */
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer-links a:hover {
+  color: #38bdf8 !important;         /* Vibrant Cyan Highlight */
+  transform: translateX(4px);
+}
+
+.social-icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.social-icon-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.5);
+}
+
+/* Newsletter Input Box */
+.footer-newsletter-box {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Payment Badge Cards */
+.payment-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  color: #ffffff !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 991.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .search-field-group {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 0;
+  }
+  .search-field-group:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .chatbot-box {
+    width: calc(100vw - 2rem);
+    right: 1rem;
+    left: 1rem;
+  }
+}

@@ -1,0 +1,228 @@
+/* ==========================================================================
+   AETHERIA VOYAGES - Premium Navigation & Responsive Action Bar CSS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Top Announcement / Contact Bar
+   -------------------------------------------------------------------------- */
+.top-bar {
+  background: #070d19;
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1045;
+}
+
+.top-bar a {
+  color: #cbd5e1;
+}
+
+.top-bar a:hover {
+  color: #38bdf8;
+}
+
+.promo-badge-top {
+  background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%);
+  color: #ffffff;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   2. Main Fixed Navbar
+   -------------------------------------------------------------------------- */
+.navbar-custom {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  padding: 0.65rem 0;
+  background: var(--bg-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.navbar-custom.scrolled {
+  padding: 0.45rem 0;
+  box-shadow: var(--shadow-md);
+  border-bottom-color: var(--primary-light);
+}
+
+/* Logo Styling */
+.navbar-brand-logo {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+  transition: var(--transition);
+}
+
+.navbar-brand-logo:hover .brand-icon-box {
+  transform: rotate(-8deg) scale(1.05);
+}
+
+.brand-subtitle-badge {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-pill);
+  vertical-align: middle;
+  margin-left: 0.25rem;
+  border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+/* Navigation Links */
+.nav-link-custom {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text-main) !important;
+  padding: 0.45rem 0.65rem !important;
+  border-radius: var(--radius-pill);
+  position: relative;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  color: var(--primary) !important;
+  background: var(--primary-light);
+}
+
+.nav-link-custom.active::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  width: 16px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+/* Navbar Action Buttons & Cluster */
+.navbar-action-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: nowrap;
+}
+
+.action-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.88rem;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.action-icon-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}
+
+.badge-count {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg-card);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Navbar CTA Buttons */
+.nav-btn-signin {
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-btn-book {
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.4rem 1rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Mobile Drawer */
+.navbar-mobile-drawer {
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+.navbar-mobile-drawer .nav-link {
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: var(--transition);
+}
+
+.navbar-mobile-drawer .nav-link:hover,
+.navbar-mobile-drawer .nav-link.active {
+  background: var(--primary-light);
+  color: var(--primary);
+}

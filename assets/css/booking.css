@@ -1,0 +1,82 @@
+/* ==========================================================================
+   WANDERLUST HORIZON - Booking System & Digital E-Ticket CSS
+   ========================================================================== */
+
+.step-progress-bar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.step-progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--border-color);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.step-item {
+  position: relative;
+  z-index: 2;
+  background: var(--bg-card);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.step-item.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.4);
+}
+
+.step-item.completed {
+  border-color: var(--success);
+  background: var(--success);
+  color: #ffffff;
+}
+
+/* Digital E-Ticket Styling */
+.eticket-container {
+  background: var(--bg-card);
+  border: 2px dashed var(--primary);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.eticket-header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eticket-stamp {
+  border: 2px solid var(--success);
+  color: var(--success);
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-sm);
+  transform: rotate(-10deg);
+  letter-spacing: 2px;
+}

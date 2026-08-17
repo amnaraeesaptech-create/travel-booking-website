@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popular Destinations | Aetheria Voyages</title>
+  <meta name="description" content="Explore world-class luxury destinations, tropical islands, alpine retreats, and cultural sanctuaries with Aetheria Voyages.">
+  <meta name="keywords" content="destinations, luxury travel, tropical beaches, alpine retreats, cultural sanctuaries, holiday booking">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & FontAwesome 6 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Modular CSS Files -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/destinations.css">
+  <link rel="stylesheet" href="assets/css/chatbot-footer.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="pagePreloader">
+    <div class="preloader-brand-box">
+      <div class="preloader-icon-glow"><i class="fas fa-paper-plane"></i></div>
+      <h2 class="preloader-title">Aetheria <span>Voyages</span></h2>
+      <span class="preloader-badge">LUXURY CELESTIAL ESCAPES</span>
+      <div class="preloader-progress-track"><div class="preloader-progress-fill"></div></div>
+      <span class="preloader-status">Loading Destinations...</span>
+    </div>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-4">
+          <span><i class="fas fa-phone-alt text-primary me-1"></i> +1 (800) 555-VOYAGE</span>
+          <span><i class="fas fa-envelope text-primary me-1"></i> support@aetheriavoyages.com</span>
+          <span><i class="fas fa-circle text-success small me-1"></i> 24/7 Concierge Support</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <span class="promo-badge-top me-2">SPECIAL OFFER</span>
+          <span class="text-white fw-semibold">Save 15% on All Voyages! Code: <strong class="text-warning">AETHERIA15</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-logo" href="index.html">
+        <div class="brand-icon-box"><i class="fas fa-paper-plane"></i></div>
+        <div>
+          <span>Aetheria</span><span class="text-gradient">Voyages</span>
+          <span class="brand-subtitle-badge">LUXURY</span>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer">
+        <i class="fas fa-bars fs-3 text-main"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="packages.html">Packages</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="stays.html">Stays</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="navbar-action-group">
+          <select id="currencySelect" class="form-select form-select-sm border-0 bg-light text-dark fw-bold rounded-pill" style="width: auto; font-size: 0.8rem;">
+            <option value="USD">$ USD</option>
+            <option value="EUR">€ EUR</option>
+            <option value="GBP">£ GBP</option>
+            <option value="JPY">¥ JPY</option>
+          </select>
+          <button id="themeToggleBtn" class="action-icon-btn" title="Toggle Theme"><i id="themeIcon" class="fas fa-moon"></i></button>
+          <button class="action-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#wishlistOffcanvas"><i class="far fa-heart"></i><span id="wishlistCountBadge" class="badge-count">0</span></button>
+          <button class="action-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#bookingsOffcanvas"><i class="fas fa-ticket-alt"></i><span id="bookingsCountBadge" class="badge-count">0</span></button>
+          <a href="packages.html" class="btn btn-brand rounded-pill nav-btn-book ms-1"><i class="fas fa-paper-plane"></i> Book Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="bg-dark text-white py-5 text-center position-relative" style="background: linear-gradient(135deg, rgba(7, 13, 25, 0.9) 0%, rgba(2, 132, 199, 0.4) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover;">
+    <div class="container py-4">
+      <span class="badge bg-primary px-3 py-2 rounded-pill mb-2">GLOBAL EXPLORATION</span>
+      <h1 class="fw-bold display-5">Explore Top Destinations</h1>
+      <p class="lead text-white-50 mx-auto" style="max-width: 600px;">From sun-drenched tropical lagoons to soaring alpine peaks, discover handpicked sanctuaries worldwide.</p>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+  <section id="destinations" class="section-padding bg-section-alt">
+    <div class="container">
+      <div id="destinationsGrid" class="row g-4">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row g-3 mb-3">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand navbar-brand-logo text-white mb-2 d-inline-flex align-items-center" href="index.html">
+            <div class="brand-icon-box me-2" style="width:34px; height:34px; font-size:1rem;"><i class="fas fa-paper-plane"></i></div>
+            <span style="font-size:1.3rem; color:#ffffff;">Aetheria</span><span class="text-gradient" style="font-size:1.3rem;">Voyages</span>
+          </a>
+          <p class="footer-text-bright mb-2">Your trusted luxury travel booking partner. Crafting celestial memories with handpicked resorts.</p>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="footer-title">Navigation</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="stays.html">Stays</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="footer-title">Help</h6>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-newsletter-box">
+            <h6 class="footer-title mb-1"><i class="fas fa-envelope-open-text text-primary me-2"></i> Exclusive Deals</h6>
+            <p class="footer-text-bright mb-2">Subscribe to receive secret discount codes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary border-opacity-25 pt-3 d-flex justify-content-between align-items-center flex-wrap gap-2 small">
+        <div class="footer-text-bright" style="font-size:0.8rem;">&copy; 2026 Aetheria Voyages Inc. All Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

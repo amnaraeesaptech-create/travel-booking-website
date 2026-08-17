@@ -1,0 +1,57 @@
+/* ==========================================================================
+   WANDERLUST HORIZON - Customer Reviews & FAQ Accordion CSS (High Contrast)
+   ========================================================================== */
+
+#testimonials {
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+#faq {
+  background-color: var(--bg-section-alt);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.faq-accordion .accordion-item {
+  border: 1px solid var(--border-color) !important;
+  margin-bottom: 1rem;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--bg-card);
+}
+
+.faq-accordion .accordion-button {
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-weight: 700;
+  padding: 1.2rem 1.5rem;
+  box-shadow: none !important;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.faq-accordion .accordion-body {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  padding: 1.2rem 1.5rem;
+  font-size: 0.95rem;
+}
